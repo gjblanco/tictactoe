@@ -34,7 +34,7 @@ var ui = {
         ui.stateMessage = 'X\'s turn';
         ui.errorMessage = '';
         ui.drawGameState();
-      }, 5000)
+      }, 3000)
     }
   },
   addMove: function(i, j) {

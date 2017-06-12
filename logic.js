@@ -19,12 +19,14 @@ TTTGame.prototype.winner = function(){
 
 TTTGame.prototype.turn = function() {
   var x = 0, o = 0;
+  console.log(this.board);
   for(var i = 0; i < 3; i++)
     for(var j = 0; j < 3; j++) {
       x += (this.board[i][j] === 'X'? 1 : 0);
       o += (this.board[i][j] === 'O'? 1 : 0);
     }
-  return x < o? 'O' : 'X';
+  console.log(x, o)
+  return x > o? 'O' : 'X';
 }
 
 TTTGame.prototype.addMove = function(i, j) {
@@ -34,7 +36,7 @@ TTTGame.prototype.addMove = function(i, j) {
   var turn = this.turn();
   this.board[i][j] = turn;
   if(this.winner() === turn) {
-    return this.turn() + ' won!';
+    return turn + ' won!';
   }
   else return this.turn() + '\'s turn';
 } 
