@@ -19,9 +19,10 @@ test('this.turn should return O if one move has been made', function(){
   t.addMove(0,0)
   expect(t.turn()).toBe('O');
 });
-// test('adds 1 + 2 to equal 3', function(){
-
-// });
+test('invalid move should throw error', function(){
+  var t = new ttt();
+  expect(function(){t.addMove(3,3)}).toThrow();
+});
 // test('adds 1 + 2 to equal 3', function(){
 
 // });
