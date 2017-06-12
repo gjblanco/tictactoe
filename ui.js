@@ -56,3 +56,5 @@ stdin.addListener('data', function(d) {
   var message;
   ui.addMove(input[0], input[1]);
 })
+
+module.exports = ui;
